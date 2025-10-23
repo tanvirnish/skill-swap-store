@@ -1,7 +1,9 @@
 [
   {
     "skillId": 1,
+    "providerImg":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs10cupyp3Wf-pZvdPjGQuKne14ngVZbYdDQ&s",
     "skillName": "Beginner Guitar Lessons",
+    "purchasedCount": 7245,
     "providerName": "Alex Martin",
     "providerEmail": "alex@skillswap.com",
     "price": 20,
@@ -13,6 +15,8 @@
   },
   {
     "skillId": 2,
+     "providerImg":"https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80",
+     "purchasedCount": 3125,
     "skillName": "Spoken English Practice",
     "providerName": "Sara Hossain",
     "providerEmail": "sara@skillswap.com",
@@ -25,7 +29,9 @@
   },
   {
     "skillId": 3,
+     "providerImg":"https://portraitpal.ai/wp-content/uploads/2024/08/headshot-examples.jpg",
     "skillName": "Yoga for Beginners",
+    "purchasedCount": 4325,
     "providerName": "Rina Das",
     "providerEmail": "rina@skillswap.com",
     "price": 15,
@@ -37,6 +43,8 @@
   },
   {
     "skillId": 4,
+     "providerImg":"https://www.shutterstock.com/image-photo/headshot-close-portrait-indian-latin-600nw-2343004301.jpg",
+     "purchasedCount": 4425,
     "skillName": "Basic Python Programming",
     "providerName": "Imran Khan",
     "providerEmail": "imran@skillswap.com",
@@ -49,7 +57,9 @@
   },
   {
     "skillId": 5,
+     "providerImg":"https://t3.ftcdn.net/jpg/03/17/51/34/360_F_317513493_jZccvnt4pDqSsQbESat201rgVKpSRUH0.jpg",
     "skillName": "Photography Basics",
+    "purchasedCount": 1435,
     "providerName": "Nadia Rahman",
     "providerEmail": "nadia@skillswap.com",
     "price": 30,
@@ -61,17 +71,22 @@
   },
   {
     "skillId": 6,
+     "providerImg":"https://img.freepik.com/free-photo/cheerful-indian-businessman-smiling-closeup-portrait-jobs-career-campaign_53876-129416.jpg?semt=ais_hybrid&w=740",
+     "purchasedCount": 1253,
     "skillName": "Spanish Conversation",
     "providerName": "Carlos Perez",
     "providerEmail": "carlos@skillswap.com",
     "price": 12,
     "rating": 4.8,
     "slotsAvailable": 6,
-    "description": "https://lh4.googleusercontent.com/LaOd85NJj_Kcprlze_8kf4O10jVBktEUavP4DWpZ4wUL_h3NS8LZmPz3Ace8atVQd7lqnO3VIJWyyU8DxG5ae24ujqrxrXqDxmdOC8aaCQqIFWWtvX707YR3XXycxeHtSutbgg_g",
+    "description": "Practice conversational Spanish with a native speaker.",
+    "image": "https://coursecloud.org/wp-content/uploads/2021/07/How-Long-Does-it-Take-to-Learn-Spanish.jpg",
     "category": "Language"
   },
   {
     "skillId": 7,
+     "providerImg":"https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80",
+     "purchasedCount": 125,
     "skillName": "Advanced Guitar Techniques",
     "providerName": "John Lee",
     "providerEmail": "john@skillswap.com",
@@ -84,6 +99,8 @@
   },
   {
     "skillId": 8,
+     "providerImg":"https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80",
+     "purchasedCount": 525,
     "skillName": "French Conversation",
     "providerName": "Marie Claire",
     "providerEmail": "marie@skillswap.com",
@@ -96,6 +113,8 @@
   },
   {
     "skillId": 9,
+     "providerImg":"https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80",
+     "purchasedCount": 745,
     "skillName": "Meditation & Mindfulness",
     "providerName": "Tina Sharma",
     "providerEmail": "tina@skillswap.com",
@@ -103,11 +122,13 @@
     "rating": 4.8,
     "slotsAvailable": 4,
     "description": "Learn meditation techniques for relaxation and focus.",
-    "image": "https://i.postimg.cc/example9.png",
+    "image": "https://plus.unsplash.com/premium_photo-1669446008139-aa8a9d7c4f12?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d29tYW4lMjBtZWRpdGF0aW9ufGVufDB8fDB8fHww&fm=jpg&q=60&w=3000",
     "category": "Health"
   },
   {
     "skillId": 10,
+     "providerImg":"https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80",
+     "purchasedCount": 925,
     "skillName": "JavaScript Fundamentals",
     "providerName": "Rahul Verma",
     "providerEmail": "rahul@skillswap.com",
@@ -115,11 +136,13 @@
     "rating": 4.6,
     "slotsAvailable": 3,
     "description": "Learn the basics of JavaScript programming.",
-    "image": "https://i.postimg.cc/example10.png",
+    "image": "https://res.cloudinary.com/dz209s6jk/image/upload/v1712224940/LearningPaths/vcu7qvitarxosrblkpld.png",
     "category": "Coding"
   },
   {
     "skillId": 11,
+     "providerImg":"https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80",
+     "purchasedCount": 155,
     "skillName": "Portrait Photography",
     "providerName": "Emma Wilson",
     "providerEmail": "emma@skillswap.com",
@@ -127,11 +150,13 @@
     "rating": 4.8,
     "slotsAvailable": 2,
     "description": "Learn how to capture stunning portraits.",
-    "image": "https://i.postimg.cc/example11.png",
+    "image": "https://www.edenart.com/_next/image?url=https%3A%2F%2Fsrv-1.eden-gallery.com%2F2021%2F11%2F9%2F618a897fe4484-youngwomanlookingthroughcameralensphotograp20210826165613utc-1.jpg&w=1920&q=75",
     "category": "Art"
   },
   {
     "skillId": 12,
+     "providerImg":"https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80",
+     "purchasedCount": 334,
     "skillName": "Creative Writing",
     "providerName": "David Brown",
     "providerEmail": "david@skillswap.com",
@@ -139,7 +164,7 @@
     "rating": 4.7,
     "slotsAvailable": 5,
     "description": "Enhance your storytelling and writing skills.",
-    "image": "https://i.postimg.cc/example12.png",
+    "image": "https://cdn.nightzookeeper.com/strapi/media/cropped_child_865116_1920_480x270_022258c723/cropped_child_865116_1920_480x270_022258c723.jpeg",
     "category": "Writing"
   }
 ]
