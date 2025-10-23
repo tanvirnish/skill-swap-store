@@ -20,7 +20,7 @@ const PopularSkill = () => {
     }, []);
 
     if (!skillsData.length)
-        return <div className="text-center py-10 text-gray-500">Loading...</div>;
+        return <div className="text-center py-10 text-gray-500"><span className="loading loading-dots loading-xl"></span></div>;
 
     const prevSlide = () => swiperRef.current?.slidePrev();
     const nextSlide = () => swiperRef.current?.slideNext();
@@ -36,62 +36,66 @@ const PopularSkill = () => {
                     Discover the most popular local skills you can learn or trade.
                 </p>
 
-        <Swiper
-         modules={[Pagination, Autoplay]}
-         onSwiper={(swiper) => (swiperRef.current = swiper)}
-         pagination={{ clickable: true }}
-         autoplay={{ delay: 3000, disableOnInteraction: false }}
-        loop
-        breakpoints={{
-            640: { slidesPerView: 1, spaceBetween: 20 },
-            768: { slidesPerView: 2, spaceBetween: 25 },
-            1024: { slidesPerView: 3, spaceBetween: 30 },
-            1280: { slidesPerView: 4, spaceBetween: 35 },
-            }}>
-           {skillsData.slice(0, 6).map((skill) => (
-            <SwiperSlide key={skill.skillId}>
-             <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className="bg-white rounded-lg shadow-xl p-2 hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                    <img
-                        src={skill.image}
-                        alt={skill.skillName}
-                        className="w-full h-48 object-cover rounded-md"
-                    />
-                 <div className="py-2">
-                    <h3 className="text-xl font-semibold mb-2">
-                      {skill.skillName}
-                    </h3>
-                <p className="text-gray-600 mb-2">Price: ${skill.price}</p>
-                <p className="text-yellow-500  flex items-center gap-3 font-bold"><img className="w-4 h-4" src={ratingImg} alt="" /> {skill.rating}</p>
-                           <button className="btn bg-[#f56942] text-white w-full mt-2">
-                    View Details
+                <Swiper
+                    modules={[Pagination, Autoplay]}
+                    onSwiper={(swiper) => (swiperRef.current = swiper)}
+                    pagination={{ clickable: true }}
+                    autoplay={{ delay: 3000, disableOnInteraction: false }}
+                    loop
+                    className="pb-8!"
+                    breakpoints={{
+                        640: { slidesPerView: 1, spaceBetween: 20 },
+                        768: { slidesPerView: 2, spaceBetween: 25 },
+                        1024: { slidesPerView: 3, spaceBetween: 30 },
+                        1280: { slidesPerView: 4, spaceBetween: 35 },
+                    }}
+                >
+                    {skillsData.slice(0, 6).map((skill) => (
+                        <SwiperSlide key={skill.skillId}>
+                            <motion.div
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                whileHover={{ scale: 1.05 }}
+                                className="bg-white rounded-lg shadow-xl p-2 hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+                            >
+                                <img
+                                    src={skill.image}
+                                    alt={skill.skillName}
+                                    className="w-full h-48 object-cover rounded-md"
+                                />
+                                <div className="py-2">
+                                    <h3 className="text-xl font-semibold mb-2">
+                                        {skill.skillName}
+                                    </h3>
+                                    <p className="text-gray-600 mb-2">Price: ${skill.price}</p>
+                                    <p className="text-yellow-500 flex items-center gap-3 font-bold">
+                                        <img className="w-4 h-4" src={ratingImg} alt="" /> {skill.rating}
+                                    </p>
+                                    <button className="btn bg-[#f56942] text-white w-full mt-2">
+                                        View Details
+                                    </button>
+                                </div>
+                            </motion.div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+
+       
+                <button
+                    onClick={prevSlide}
+                    className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 sm:p-3 rounded-full z-10">
+                    <FaArrowLeft size={20} />
                 </button>
-        </div>
-                </motion.div>
-                </SwiperSlide>
-        ))}
-    </Swiper>
-
-
-            <button
-                onClick={prevSlide}
-                className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 sm:p-3 rounded-full z-10">
-                <FaArrowLeft size={20} />
-            </button>
-            <button
-                onClick={nextSlide}
-                className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 sm:p-3 rounded-full z-10">
-                <FaArrowRight size={20} />
-            </button>
+                <button
+                    onClick={nextSlide}
+                    className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 sm:p-3 rounded-full z-10">
+                    <FaArrowRight size={20} />
+                </button>
             </div>
         </section>
     );
 };
 
 export default PopularSkill;
-
-

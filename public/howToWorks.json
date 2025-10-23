@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Create Your Profile",
+    "extra": "Set up a profile highlighting your skills. Add a profile picture, bio, and showcase your skills.",
+    "icon": "user"
+  },
+  {
+    "id": 2,
+    "title": "Find Skills to Learn",
+    "extra": "Discover new skills offered by local experts. Search by category or skill type to find the perfect match.",
+    "icon": "search"
+  },
+  {
+    "id": 3,
+    "title": "Connect and Learn",
+    "extra": "Connect with others to learn new skills effectively. Message your instructor or join a session instantly.",
+    "icon": "users"
+  },
+  {
+    "id": 4,
+    "title": "Exchange Knowledge",
+    "extra": "Share your knowledge with others in your community. Offer your skills in exchange and get reviews.",
+    "icon": "exchange"
+  },
+  {
+    "id": 5,
+    "title": "Review and Improve",
+    "extra": "Review your progress and improve your skills continuously. Check feedback, ratings, and track your growth.",
+    "icon": "star"
+  }
+]

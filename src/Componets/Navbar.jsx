@@ -18,12 +18,12 @@ const Navbar = () => {
                 </NavLink>
             </li>
             <li>
-                <NavLink to="about-us" className={navLinkClasses}  >
-                    About Us
+                <NavLink to="/all-skills" className={navLinkClasses}  >
+                    All Skills
                 </NavLink>
             </li>
             <li>
-                <NavLink to="profile" className={navLinkClasses} >
+                <NavLink to="/profile" className={navLinkClasses} >
                     Profile
                 </NavLink>
             </li>
