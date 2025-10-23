@@ -1,0 +1,147 @@
+[
+  {
+    "skillId": 1,
+    "skillName": "Beginner Guitar Lessons",
+    "providerName": "Alex Martin",
+    "providerEmail": "alex@skillswap.com",
+    "price": 20,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Acoustic guitar classes for complete beginners.",
+    "image": "https://i.postimg.cc/LXPK0kvj/Gemini-Generated-Image-attoftattoftatto.png",
+    "category": "Music"
+  },
+  {
+    "skillId": 2,
+    "skillName": "Spoken English Practice",
+    "providerName": "Sara Hossain",
+    "providerEmail": "sara@skillswap.com",
+    "price": 10,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "Conversational English sessions for non-native speakers.",
+    "image": "https://i.postimg.cc/hGbV8NRm/public.jpg",
+    "category": "Language"
+  },
+  {
+    "skillId": 3,
+    "skillName": "Yoga for Beginners",
+    "providerName": "Rina Das",
+    "providerEmail": "rina@skillswap.com",
+    "price": 15,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Learn basic yoga postures and meditation techniques.",
+    "image": "https://media.self.com/photos/5b7c4e71ecbb7f4c41c77335/4:3/w_1280%2Cc_limit/triangle-pose-beginner-yoga.jpg",
+    "category": "Health"
+  },
+  {
+    "skillId": 4,
+    "skillName": "Basic Python Programming",
+    "providerName": "Imran Khan",
+    "providerEmail": "imran@skillswap.com",
+    "price": 25,
+    "rating": 4.7,
+    "slotsAvailable": 2,
+    "description": "Python programming for absolute beginners.",
+    "image": "https://m.media-amazon.com/images/I/81NktM8imqL._SY342_.jpg",
+    "category": "Coding"
+  },
+  {
+    "skillId": 5,
+    "skillName": "Photography Basics",
+    "providerName": "Nadia Rahman",
+    "providerEmail": "nadia@skillswap.com",
+    "price": 30,
+    "rating": 4.5,
+    "slotsAvailable": 3,
+    "description": "Learn how to take stunning photos using any camera.",
+    "image": "https://static-cse.canva.com/blob/1145468/Photography_Canva28.967fa495.avif",
+    "category": "Art"
+  },
+  {
+    "skillId": 6,
+    "skillName": "Spanish Conversation",
+    "providerName": "Carlos Perez",
+    "providerEmail": "carlos@skillswap.com",
+    "price": 12,
+    "rating": 4.8,
+    "slotsAvailable": 6,
+    "description": "https://lh4.googleusercontent.com/LaOd85NJj_Kcprlze_8kf4O10jVBktEUavP4DWpZ4wUL_h3NS8LZmPz3Ace8atVQd7lqnO3VIJWyyU8DxG5ae24ujqrxrXqDxmdOC8aaCQqIFWWtvX707YR3XXycxeHtSutbgg_g",
+    "category": "Language"
+  },
+  {
+    "skillId": 7,
+    "skillName": "Advanced Guitar Techniques",
+    "providerName": "John Lee",
+    "providerEmail": "john@skillswap.com",
+    "price": 35,
+    "rating": 4.9,
+    "slotsAvailable": 2,
+    "description": "Improve your guitar skills with advanced techniques.",
+    "image": "https://cdn.tomhess.net/images/products-page/How-To-Teach-Guitar-Like-A-Wizzard.jpg?v=2",
+    "category": "Music"
+  },
+  {
+    "skillId": 8,
+    "skillName": "French Conversation",
+    "providerName": "Marie Claire",
+    "providerEmail": "marie@skillswap.com",
+    "price": 15,
+    "rating": 4.7,
+    "slotsAvailable": 5,
+    "description": "Practice conversational French with a native speaker.",
+    "image": "https://thumbs.dreamstime.com/b/man-learn-speaking-french-bubble-56303058.jpg?w=768",
+    "category": "Language"
+  },
+  {
+    "skillId": 9,
+    "skillName": "Meditation & Mindfulness",
+    "providerName": "Tina Sharma",
+    "providerEmail": "tina@skillswap.com",
+    "price": 20,
+    "rating": 4.8,
+    "slotsAvailable": 4,
+    "description": "Learn meditation techniques for relaxation and focus.",
+    "image": "https://i.postimg.cc/example9.png",
+    "category": "Health"
+  },
+  {
+    "skillId": 10,
+    "skillName": "JavaScript Fundamentals",
+    "providerName": "Rahul Verma",
+    "providerEmail": "rahul@skillswap.com",
+    "price": 30,
+    "rating": 4.6,
+    "slotsAvailable": 3,
+    "description": "Learn the basics of JavaScript programming.",
+    "image": "https://i.postimg.cc/example10.png",
+    "category": "Coding"
+  },
+  {
+    "skillId": 11,
+    "skillName": "Portrait Photography",
+    "providerName": "Emma Wilson",
+    "providerEmail": "emma@skillswap.com",
+    "price": 40,
+    "rating": 4.8,
+    "slotsAvailable": 2,
+    "description": "Learn how to capture stunning portraits.",
+    "image": "https://i.postimg.cc/example11.png",
+    "category": "Art"
+  },
+  {
+    "skillId": 12,
+    "skillName": "Creative Writing",
+    "providerName": "David Brown",
+    "providerEmail": "david@skillswap.com",
+    "price": 18,
+    "rating": 4.7,
+    "slotsAvailable": 5,
+    "description": "Enhance your storytelling and writing skills.",
+    "image": "https://i.postimg.cc/example12.png",
+    "category": "Writing"
+  }
+]
+
+
