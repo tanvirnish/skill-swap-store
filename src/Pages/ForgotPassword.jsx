@@ -7,7 +7,7 @@ const ForgotPassword = () => {
     const { resetPassword } = useAuth();
     const location = useLocation();
 
-    // Prefill email if passed from login
+    
     const [email, setEmail] = useState(location.state?.email || "");
 
     const handleReset = async (e) => {
@@ -21,7 +21,7 @@ const ForgotPassword = () => {
             await resetPassword(email);
             toast.success("Password reset email sent. Check your inbox.");
 
-            // Open Gmail in a new tab (best-effort)
+          
             window.open(`https://mail.google.com/mail/u/0/#search/${encodeURIComponent(email)}`, "_blank");
         } catch (err) {
             toast.error(err.message);

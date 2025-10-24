@@ -19,7 +19,7 @@ const UserReviews = () => {
     }, []);
 
     if (!reviews.length)
-        return <div className="text-center py-10 text-gray-500">Loading...</div>;
+        return <div className="text-center py-10 text-gray-500"><span className="loading loading-dots loading-xl"></span></div>;
 
     return (
         <section className="py-10 bg-gray-50">
@@ -65,7 +65,7 @@ const UserReviews = () => {
                                 </p>
                                 <div className="flex items-center gap-1 mt-auto">
                                     <img src={ratingImg} alt="rating" className="w-4 h-4" />
-                                    <span className="font-bold">{review.rating}</span>
+                                    <span className="font-bold text-yellow-500">{review.rating}</span>
                                 </div>
                             </motion.div>
                         </SwiperSlide>

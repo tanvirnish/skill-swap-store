@@ -9,7 +9,7 @@ const ProtectedRoute = ({ children }) => {
     if (loading) {
         return (
             <div className="min-h-[60vh] flex items-center justify-center text-gray-500 text-lg">
-                Loading...
+                <span className="loading loading-dots loading-xl"></span>
             </div>
         );
     }
