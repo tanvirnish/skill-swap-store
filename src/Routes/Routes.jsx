@@ -48,6 +48,7 @@ import Login from "../Pages/Login";
 import SkillDetails from "../Pages/SkillDetails";
 
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
+import ForgotPassword from "../Pages/ForgotPassword";
 
 export const router = createBrowserRouter([
     {
@@ -85,6 +86,10 @@ export const router = createBrowserRouter([
                         <SkillDetails />
                     </ProtectedRoute>
                 ),
+            },
+            {
+                path: "/forgot-password",
+                element: <ForgotPassword />
             },
         ]
     },

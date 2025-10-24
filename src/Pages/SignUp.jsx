@@ -1,6 +1,78 @@
+// import { useState } from 'react';
+// import { BiHide, BiShow } from "react-icons/bi";
+// import { useNavigate } from 'react-router';
+// import { toast } from 'react-toastify';
+// import MyContainer from '../Componets/MyContainer';
+// import { useAuth } from "../AuthProvider/AuthContext";
+
+// const SignUp = () => {
+//     const [show, setShow] = useState(false);
+//     const navigate = useNavigate();
+//     const { signup } = useAuth();
+
+//     const handleSignUp = async (e) => {
+//         e.preventDefault();
+//         const email = e.target.email.value;
+//         const password = e.target.password.value;
+
+//         // password validation
+//         const regExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
+//         if (!regExp.test(password)) {
+//             toast.error("Password must be at least 6 characters, include uppercase, lowercase, and number!");
+//             return;
+//         }
+
+//         try {
+//             await signup(email, password);
+//             toast.success('Sign Up Successful');
+//             navigate('/');
+//         } catch (err) {
+//             toast.error(err.message);
+//         }
+//     };
+
+//     return (
+//         <MyContainer>
+//             <div className="hero bg-linear-to-r from-red-500 to-orange-500 min-h-screen flex items-center justify-center">
+//                 <div className="card bg-white/5 backdrop-blur-md w-full max-w-sm shrink-0 rounded-2xl shadow-lg border border-white/10">
+//                     <div className="card-body">
+//                         <form onSubmit={handleSignUp} className="flex flex-col gap-3">
+//                             <h2 className="text-2xl font-bold text-center text-white">Sign Up</h2>
+//                             <input
+//                                 name="email"
+//                                 type="email"
+//                                 placeholder="Email"
+//                                 className="input input-bordered w-full bg-transparent border-white/50 placeholder-white text-white focus:border-[#f56942] focus:ring focus:ring-[#f56942]/30"
+//                                 required
+//                             />
+//                             <div className="relative">
+//                                 <input
+//                                     name="password"
+//                                     type={show ? "text" : "password"}
+//                                     placeholder="Password"
+//                                     className="input input-bordered w-full bg-transparent border-white/50 placeholder-white text-white focus:border-[#f56942] focus:ring focus:ring-[#f56942]/30"
+//                                     required
+//                                 />
+//                                 <span onClick={() => setShow(!show)} className='absolute right-3 top-2 cursor-pointer text-white'>
+//                                     {show ? <BiHide /> : <BiShow />}
+//                                 </span>
+//                             </div>
+//                             <button type="submit" className="btn btn-neutral mt-2 w-full">Sign Up</button>
+//                         </form>
+//                     </div>
+//                 </div>
+//             </div>
+//         </MyContainer>
+//     );
+// };
+
+// export default SignUp;
+
+
+
 import { useState } from 'react';
 import { BiHide, BiShow } from "react-icons/bi";
-import { useNavigate } from 'react-router';
+import { useNavigate, Link } from 'react-router';
 import { toast } from 'react-toastify';
 import MyContainer from '../Componets/MyContainer';
 import { useAuth } from "../AuthProvider/AuthContext";
@@ -8,14 +80,16 @@ import { useAuth } from "../AuthProvider/AuthContext";
 const SignUp = () => {
     const [show, setShow] = useState(false);
     const navigate = useNavigate();
-    const { signup } = useAuth();
+    const { signup, signInWithGoogle, updateUserProfile } = useAuth();
 
     const handleSignUp = async (e) => {
         e.preventDefault();
+        const name = e.target.name.value;
         const email = e.target.email.value;
+        const photoURL = e.target.photoURL.value;
         const password = e.target.password.value;
 
-        // password validation
+        // Password validation
         const regExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
         if (!regExp.test(password)) {
             toast.error("Password must be at least 6 characters, include uppercase, lowercase, and number!");
@@ -23,8 +97,23 @@ const SignUp = () => {
         }
 
         try {
+            // Sign up user
             await signup(email, password);
+
+            // Update user profile
+            await updateUserProfile({ displayName: name, photoURL: photoURL });
+
             toast.success('Sign Up Successful');
+            navigate('/');
+        } catch (err) {
+            toast.error(err.message);
+        }
+    };
+
+    const handleGoogleSignUp = async () => {
+        try {
+            await signInWithGoogle();
+            toast.success("Login Successful");
             navigate('/');
         } catch (err) {
             toast.error(err.message);
@@ -34,10 +123,17 @@ const SignUp = () => {
     return (
         <MyContainer>
             <div className="hero bg-linear-to-r from-red-500 to-orange-500 min-h-screen flex items-center justify-center">
-                <div className="card bg-white/5 backdrop-blur-md w-full max-w-sm shrink-0 rounded-2xl shadow-lg border border-white/10">
+                <div className="card bg-white/5 backdrop-blur-md w-full max-w-sm rounded-2xl shadow-lg border border-white/10">
                     <div className="card-body">
+                        <h2 className="text-2xl font-bold text-center text-white mb-4">Create Your Account</h2>
                         <form onSubmit={handleSignUp} className="flex flex-col gap-3">
-                            <h2 className="text-2xl font-bold text-center text-white">Sign Up</h2>
+                            <input
+                                name="name"
+                                type="text"
+                                placeholder="Name"
+                                className="input input-bordered w-full bg-transparent border-white/50 placeholder-white text-white focus:border-[#f56942] focus:ring focus:ring-[#f56942]/30"
+                                required
+                            />
                             <input
                                 name="email"
                                 type="email"
@@ -45,7 +141,13 @@ const SignUp = () => {
                                 className="input input-bordered w-full bg-transparent border-white/50 placeholder-white text-white focus:border-[#f56942] focus:ring focus:ring-[#f56942]/30"
                                 required
                             />
-                            <div className="relative">
+                            <input
+                                name="photoURL"
+                                type="text"
+                                placeholder="Photo URL"
+                                className="input input-bordered w-full bg-transparent border-white/50 placeholder-white text-white focus:border-[#f56942] focus:ring focus:ring-[#f56942]/30"
+                            />
+                            {/* <div className="relative">
                                 <input
                                     name="password"
                                     type={show ? "text" : "password"}
@@ -56,9 +158,35 @@ const SignUp = () => {
                                 <span onClick={() => setShow(!show)} className='absolute right-3 top-2 cursor-pointer text-white'>
                                     {show ? <BiHide /> : <BiShow />}
                                 </span>
+                            </div> */}
+                            <div className="relative">
+                                <input
+                                    name="password"
+                                    type={show ? "text" : "password"}
+                                    placeholder="Password"
+                                    className="input input-bordered w-full bg-transparent border-white/50 placeholder-white text-white focus:border-[#f56942] focus:ring focus:ring-[#f56942]/30"
+                                    required
+                                />
+                                <span
+                                    onClick={() => setShow(!show)}
+                                    className='absolute right-3 top-2 cursor-pointer text-white text-xl'
+                                >
+                                    {show ? <BiHide /> : <BiShow />}
+                                </span>
                             </div>
-                            <button type="submit" className="btn btn-neutral mt-2 w-full">Sign Up</button>
+
+                            <button type="submit" className="btn btn-neutral mt-2 w-full">Register</button>
                         </form>
+
+                        <button type="button" onClick={handleGoogleSignUp} className="btn bg-white/20 text-black border-[#e5e5e5]">
+                            <svg aria-label="Google logo" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g><path d="m0 0H512V512H0" fill="#fff"></path><path fill="#34a853" d="M153 292c30 82 118 95 171 60h62v48A192 192 0 0190 341"></path><path fill="#4285f4" d="m386 400a140 175 0 0053-179H260v74h102q-7 37-38 57"></path><path fill="#fbbc02" d="m90 341a208 200 0 010-171l63 49q-12 37 0 73"></path><path fill="#ea4335" d="m153 219c22-69 116-109 179-50l55-54c-78-75-230-72-297 55"></path></g></svg>
+                            Login with Google
+                        </button>
+
+
+                        <p className="text-center text-white mt-3">
+                            Already have an account? <Link to="/login" className="text-blue-500 underline">Login</Link>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -67,3 +195,4 @@ const SignUp = () => {
 };
 
 export default SignUp;
+

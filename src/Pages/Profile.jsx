@@ -28,14 +28,14 @@ const Profile = () => {
                     className="w-32 h-32 rounded-full object-cover mb-4"
                 />
                 <h2 className="text-2xl font-bold">{user?.displayName || "No Name"}</h2>
-                <p className="text-gray-600">{user?.email}</p>
+                <p className="text-gray-600 font-bold">{user?.email}</p>
 
                 {editing ? (
                     <form onSubmit={handleUpdate} className="flex flex-col gap-3 w-full mt-4">
                         <input
                             value={name}
                             onChange={(e) => setName(e.target.value)}
-                            className="input input-bordered w-full"
+                            className="input input-bordered w-full "
                             placeholder="Name"
                             required
                         />
@@ -59,7 +59,7 @@ const Profile = () => {
                 ) : (
                     <button
                         onClick={() => setEditing(true)}
-                        className="btn btn-neutral mt-4"
+                            className="btn bg-[#f56942] text-white mt-4"
                     >
                         Update Profile
                     </button>

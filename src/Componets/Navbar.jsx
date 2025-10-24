@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MyContainer from './MyContainer';
 import { NavLink, useNavigate } from 'react-router';
 import logo from '../assets/logo.png';
@@ -7,11 +7,10 @@ import { useAuth } from '../AuthProvider/AuthContext';
 const Navbar = () => {
     const navigate = useNavigate();
     const { user, logout } = useAuth();
+    const [showProfileInfo, setShowProfileInfo] = useState(false);
 
     const navLinkClasses = ({ isActive }) =>
-        isActive
-            ? "text-[#f56942] underline pb-1 font-bold"
-            : "";
+        isActive ? "text-[#f56942] underline pb-1 font-bold" : "";
 
     const links = (
         <>
@@ -46,7 +45,8 @@ const Navbar = () => {
 
     return (
         <MyContainer>
-            <div className="navbar bg-base-100 border-b-2 border-gray-200">
+            <div className="navbar bg-base-100 border-b-2 border-gray-200 relative">
+               
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -61,26 +61,50 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <a className="flex items-center text-xl font-semibold">
-                        <span><img className='h-10 w-10' src={logo} alt="" /></span>
-                        Skill <span className='text-[#f56942]'>Swap</span>
+                    <a className="flex items-center text-xl font-semibold cursor-pointer">
+                        <img className='h-10 w-10' src={logo} alt="" />
+                        <span className="ml-1">Skill <span className='text-[#f56942]'>Swap</span></span>
                     </a>
                 </div>
 
+           
                 <div className="navbar-center hidden lg:flex">
                     <ul className="gap-4 menu-horizontal px-1 font-semibold">
                         {links}
                     </ul>
                 </div>
 
-                <div className="navbar-end gap-5">
+              
+                <div className="navbar-end gap-3 flex items-center">
                     {user ? (
-                        <button
-                            onClick={handleLogout}
-                            className="btn rounded-full bg-[#f56942] text-white"
-                        >
-                            Sign Out
-                        </button>
+                        <>
+                           
+                            <div
+                                className="relative"
+                                onMouseEnter={() => setShowProfileInfo(true)}
+                                onMouseLeave={() => setShowProfileInfo(false)}
+                            >
+                                <img
+                                    src={user.photoURL || 'https://via.placeholder.com/40'}
+                                    alt={user.displayName || "User"}
+                                    className="h-10 w-10 rounded-full border-2 border-[#f56942] cursor-pointer"
+                                    onClick={() => navigate("/profile")}
+                                />
+                                {showProfileInfo && (
+                                    <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg p-3 text-gray-800 z-50">
+                                        <p className="font-semibold">{user.displayName || "No Name"}</p>
+                                        <p className="text-sm truncate">{user.email}</p>
+                                    </div>
+                                )}
+                            </div>
+
+                            <button
+                                onClick={handleLogout}
+                                className="btn rounded-full bg-[#f56942] text-white"
+                            >
+                                Sign Out
+                            </button>
+                        </>
                     ) : (
                         <>
                             <button
