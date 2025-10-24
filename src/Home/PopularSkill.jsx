@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router"; // ← Import Link
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -28,7 +29,6 @@ const PopularSkill = () => {
     return (
         <section className="py-12 bg-gray-50 relative">
             <div className="max-w-7xl mx-auto px-4">
-
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-3">
                     Popular Skills
                 </h2>
@@ -73,16 +73,19 @@ const PopularSkill = () => {
                                     <p className="text-yellow-500 flex items-center gap-3 font-bold">
                                         <img className="w-4 h-4" src={ratingImg} alt="" /> {skill.rating}
                                     </p>
-                                    <button className="btn bg-[#f56942] text-white w-full mt-2">
+                                    {/* ← Link ব্যবহার করে View Details connect করা */}
+                                    <Link
+                                        to={`/skill/${skill.skillId}`}
+                                        className="btn bg-[#f56942] text-white w-full mt-2 text-center"
+                                    >
                                         View Details
-                                    </button>
+                                    </Link>
                                 </div>
                             </motion.div>
                         </SwiperSlide>
                     ))}
                 </Swiper>
 
-       
                 <button
                     onClick={prevSlide}
                     className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 sm:p-3 rounded-full z-10">
