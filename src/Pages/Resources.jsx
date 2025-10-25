@@ -43,7 +43,7 @@ const Resources = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-8">
                 {resourceItems.map(resource => (
                     <div key={resource.id} className="relative bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-                        <span className="absolute top-2 left-2 bg-[#f56942] text-white text-xs font-bold px-2 py-1 rounded z-10">
+                        <span className="absolute top-0 left-0 bg-[#f56942] text-white text-xs font-bold px-2 py-1 rounded z-10">
                             {resource.type.toUpperCase()}
                         </span>
 
