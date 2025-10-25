@@ -3,6 +3,8 @@ import MyContainer from './MyContainer';
 import { NavLink, useNavigate } from 'react-router';
 import logo from '../assets/logo.png';
 import { useAuth } from '../AuthProvider/AuthContext';
+import { toast } from 'react-toastify';
+
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -51,7 +53,7 @@ const Navbar = () => {
             await logout();
             navigate("/login", { replace: true });
         } catch (err) {
-            console.error(err.message);
+            toast.error.error(err.message);
         }
     };
 

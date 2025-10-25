@@ -19,7 +19,7 @@ const Resources = () => {
                 setDataLoading(false);
             })
             .catch(err => {
-                console.error('Failed to load resources:', err);
+                toast.error('Failed to load resources:', err);
                 setDataLoading(false);
             });
     }, []);

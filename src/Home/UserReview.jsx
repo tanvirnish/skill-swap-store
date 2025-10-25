@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 import ratingImg from "../../src/assets/icon-ratings.png";
+import { toast } from "react-toastify";
 
 const UserReviews = () => {
     const [reviews, setReviews] = useState([]);
@@ -15,7 +16,7 @@ const UserReviews = () => {
         fetch("/userReview.json")
             .then((res) => res.json())
             .then((data) => setReviews(data))
-            .catch((err) => console.error("Failed to load reviews:", err));
+            .catch((err) => toast.error("Failed to load reviews:", err));
     }, []);
 
     if (!reviews.length)

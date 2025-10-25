@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import { FaUser, FaSearch, FaUsers, FaExchangeAlt, FaStar, FaPlus, FaMinus } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const iconMap = {
     user: <FaUser className="w-6 h-6 text-[#f56942]" />,
@@ -19,7 +20,7 @@ const HowItWorks = () => {
         fetch("/howToWorks.json")
             .then((res) => res.json())
             .then((data) => setSteps(data))
-            .catch((err) => console.error("Failed to load steps:", err));
+            .catch((err) => toast.error("Failed to load steps:", err));
     }, []);
 
     const toggleStep = (id) => {

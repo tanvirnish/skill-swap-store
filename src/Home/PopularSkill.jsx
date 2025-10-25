@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ratingImg from "../../src/assets/icon-ratings.png";
+import { toast } from "react-toastify";
 
 const PopularSkill = () => {
 const [skillsData, setSkillsData] = useState([]);
@@ -22,7 +23,7 @@ useEffect(() => {
                 .slice(0, 6);
             setSkillsData(sorted);
         })
-        .catch((err) => console.error("Failed to load skills data:", err));
+        .catch((err) => toast.error("Failed to load skills data:", err));
 }, []);
 
 if (!skillsData.length)

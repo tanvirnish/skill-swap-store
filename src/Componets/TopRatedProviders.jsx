@@ -4,6 +4,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import MyContainer from "./MyContainer";
+import { toast } from "react-toastify";
 
 const TopRatedProviders = () => {
     const [providers, setProviders] = useState([]);
@@ -17,7 +18,7 @@ const TopRatedProviders = () => {
                     .slice(0, 6);
                 setProviders(sorted);
             })
-            .catch((err) => console.error("Failed to load providers:", err));
+            .catch((err) => toast.error("Failed to load providers:", err));
     }, []);
 
     if (!providers.length)

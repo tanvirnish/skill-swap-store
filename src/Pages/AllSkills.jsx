@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router";
 import ratingImg from "../../src/assets/icon-ratings.png";
+import { toast } from "react-toastify";
 
 const AllSkills = () => {
     const [skillsData, setSkillsData] = useState([]);
@@ -12,7 +13,7 @@ const AllSkills = () => {
         fetch("/skillData.json")
             .then((res) => res.json())
             .then((data) => setSkillsData(data))
-            .catch((err) => console.error("Failed to load skills data:", err));
+            .catch((err) => toast.error("Failed to load skills data:", err));
     }, []);
 
     if (!skillsData.length)

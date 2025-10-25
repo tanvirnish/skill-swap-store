@@ -52,8 +52,7 @@ const Profile = () => {
 
             
             <div className="w-full px-4 sm:px-6 md:px-20 mt-20 md:mt-0">
-                <div className="flex flex-col md:flex-row items-start gap-6 w-full">
-                  
+                <div className="flex flex-col md:flex-row items-start gap-6 w-full">                
                     <div className="w-36 hidden md:block" />
 
                     <div className="flex-1 w-full">
