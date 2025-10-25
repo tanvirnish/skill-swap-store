@@ -12,6 +12,7 @@ const Navbar = () => {
     const navLinkClasses = ({ isActive }) =>
         isActive ? "text-[#f56942] underline pb-1 font-bold" : "";
 
+
     const links = (
         <>
             <li>
@@ -24,6 +25,17 @@ const Navbar = () => {
                     All Skills
                 </NavLink>
             </li>
+
+           
+            {user && (
+                <li>
+                    <NavLink to="/resources" className={navLinkClasses}>
+                        Resources
+                    </NavLink>
+                </li>
+            )}
+
+            
             {user && (
                 <li>
                     <NavLink to="/profile" className={navLinkClasses}>
@@ -37,7 +49,7 @@ const Navbar = () => {
     const handleLogout = async () => {
         try {
             await logout();
-            navigate("/login");
+            navigate("/login", { replace: true });
         } catch (err) {
             console.error(err.message);
         }

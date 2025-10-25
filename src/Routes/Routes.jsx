@@ -10,6 +10,7 @@ import SkillDetails from "../Pages/SkillDetails";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import ForgotPassword from "../Pages/ForgotPassword";
 import Error from "../Pages/Error";
+import Resources from "../Pages/Resources";
 
 export const router = createBrowserRouter([
     {
@@ -23,6 +24,14 @@ export const router = createBrowserRouter([
             {
                 path: "/all-skills",
                 element: <AllSkills />,
+            },
+            {
+                path: "/resources",
+                element: (
+                    <ProtectedRoute>
+                        <Resources />
+                    </ProtectedRoute>
+                ),
             },
             {
                 path: "/profile",

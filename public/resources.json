@@ -1,0 +1,80 @@
+[
+  {
+    "id":1,
+    "appImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9Z9zIYg3Ha7Lk6W26kNG5eZ7gWHz3xT7iog&s",
+    "appName": "SkillMaster",
+    "name": "John Doe",
+    "author-img": "https://t3.ftcdn.net/jpg/02/10/52/68/360_F_210526825_Ofue4ciCf8Q6Tx1zEL6iygy83daAi7Kw.jpg",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV7mDvj4xzGBxgdDWb1yTZrfzsxvAtZismM6DG0GKPUwEIDq7dQ1WaEvSWmdwz_C2g8CA&usqp=CAU",
+    "date": "Oct 21, 2024",
+    "title": "The Fiction Writer’s Cheatsheet: 35 Prompts to Get You Writing",
+    "description": "Get inspired with nine unique Procreate projects made by our talented Skillshare teachers.",
+    "verified": true,
+    "type": "ebook"
+  },
+  {
+    "id":2,
+    "appImg": "https://play-lh.googleusercontent.com/hh0AAApFJYhu1Bi3lgioG-KAWjLM2HCi3Ml5OBoZl0Ofwlb570U5JigsA27y0vyTlMQ=w240-h480-rw",
+    "appName": "LearnPro",
+    "name": "Emily Clarke",
+    "author-img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc5R0FTddouswBuAjoil4HTf-m8oKjCHZ6Ig&s",
+    "img": "https://pixel77.com/wp-content/uploads/2018/10/1934823-e1540532501723.jpg",
+    "date": "Nov 05, 2024",
+    "title": "Mastering Digital Illustration: A Beginner’s Guide",
+    "description": "Step-by-step guide to create stunning digital illustrations using Procreate.",
+    "verified": false,
+    "type": "guide"
+  },
+  {
+    "id":3,
+    "appImg": "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/03c4ec193593971.65eed2b762e9a.jpg",
+    "appName": "BookHive",
+    "name": "Michael Smith",
+    "author-img": "https://i0.wp.com/ridethewave.co/wp-content/uploads/2023/11/RTW0041-Edit_websize.jpg?resize=739%2C924&ssl=1",
+    "img": "https://img.freepik.com/free-photo/creativity-creative-ideas-imagination-inspiration-design-concept_53876-123736.jpg",
+    "date": "Sep 12, 2024",
+    "title": "Creative Writing Essentials: Techniques and Tips",
+    "description": "Learn creative writing techniques from industry experts and improve your storytelling skills.",
+    "verified": true,
+    "type": "industry-report"
+  },
+  {
+    "id":4,
+    "appImg": "https://store-images.s-microsoft.com/image/apps.18553.13510798887135673.74e4ecfd-578a-474b-ae6c-8871b9cb56f7.ac8355a5-a563-410e-b417-f5afbd9fb6d5",
+    "appName": "StoryLab",
+    "name": "Sophia Lee",
+    "author-img": "https://images.squarespace-cdn.com/content/v1/64dbc795f3de7829b946e138/04446c1a-2eec-4a2e-b654-6a2e72290671/Seattle-headshots-photography-studio-1.jpg",
+    "img": "https://png.pngtree.com/thumb_back/fw800/background/20250914/pngtree-close-up-of-an-open-book-with-radiant-lights-shining-from-image_19357401.webp",
+    "date": "Oct 10, 2024",
+    "title": "The Art of Short Stories: Writing That Captivates",
+    "description": "A practical guide to writing engaging short stories that leave an impact on readers.",
+    "verified": false,
+    "type": "ebook"
+  },
+  {
+    "id":5,
+    "appImg": "https://cdn.dribbble.com/userupload/17064056/file/original-23909ae05b7ad399e60a61467cca821f.jpg?resize=400x0",
+    "appName": "CreativeDesk",
+    "name": "David Johnson",
+    "author-img": "https://www.neilsonreeves.co.uk/wp-content/uploads/Corporate-Headshot-grey-background.jpg",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCGAfds9963cOfJIkUp6OWmGiK-U6Ocseu4w&s",
+    "date": "Oct 25, 2024",
+    "title": "Visual Storytelling with Procreate: A Hands-On Approach",
+    "description": "Unlock your creativity and master visual storytelling through step-by-step Procreate exercises.",
+    "verified": true,
+    "type": "guide"
+  },
+  {
+    "id":6,
+    "appImg": "https://cdn.dribbble.com/userupload/17165169/file/original-8c4e8ae040ea62af3ceef6f63101075c.png?crop=0x0-3232x2424&format=webp&resize=400x300&vertical=center",
+    "appName": "SkillUp",
+    "name": "Olivia Brown",
+    "author-img": "https://images.squarespace-cdn.com/content/v1/572e050c4d088ea3a8f0ac9d/1572711304319-K2K7Y2PKAW0QVJLQGVW7/Atlanta-Professional-Headshots-1.jpg",
+    "img": "https://cdn.dribbble.com/userupload/34943946/file/original-b24099bb2dba4118f3e9bacee544208f.jpeg?format=webp&resize=400x300&vertical=center",
+    "date": "Nov 01, 2024",
+    "title": "From Idea to Manuscript: Writing Your First Novel",
+    "description": "A complete roadmap for aspiring authors to take their ideas and turn them into a finished manuscript.",
+    "verified": true,
+    "type": "industry-report"
+  }
+]
