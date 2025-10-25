@@ -5,8 +5,8 @@ import { MdModeEditOutline } from "react-icons/md";
 
 const Profile = () => {
     const { user, updateUserProfile } = useAuth();
-
     const [showUpdateForm, setShowUpdateForm] = useState(false);
+    const [photoError, setPhotoError] = useState(false);
     const [formData, setFormData] = useState({
         displayName: user?.displayName || "",
         email: user?.email || "",
@@ -27,32 +27,41 @@ const Profile = () => {
             });
             toast.success("Profile updated successfully!");
             setShowUpdateForm(false);
+            setPhotoError(false);
         } catch (err) {
             toast.error(err.message);
         }
     };
 
+    const getSafeAvatar = () => {
+        if (!user) return null;
+        if (photoError || !user.photoURL || !user.photoURL.startsWith("http")) return null;
+        return user.photoURL;
+    };
+
     return (
         <div className="min-h-screen bg-gray-100">
-        
             <div className="relative bg-linear-to-r from-sky-100 to-slate-50">
                 <div className="h-44 md:h-56 bg-[url('https://skitguys.com/media/images/video/_1200x630_crop_center-center_82_none/Nature_Walk_Welcome_Still_Shift-HD.jpeg?mtime=1593629440')] bg-center bg-cover"></div>
 
-     
                 <div className="absolute left-10 -bottom-16 md:left-20">
-                    <div className="w-36 h-36 rounded-full ring-4 ring-[#f56942] shadow-lg overflow-hidden bg-white">
-                        <img
-                            src={user?.photoURL || "https://via.placeholder.com/150"}
-                            alt="avatar"
-                            className="object-cover w-full h-full"
-                        />
+                    <div className="w-36 h-36 rounded-full ring-4 ring-[#f56942] shadow-lg overflow-hidden bg-white text-[#f56942] flex items-center justify-center text-7xl font-bold">
+                        {getSafeAvatar() ? (
+                            <img
+                                src={getSafeAvatar()}
+                                alt="Avatar"
+                                className="object-cover w-full h-full"
+                                onError={() => setPhotoError(true)}
+                            />
+                        ) : (
+                            (user?.displayName?.[0] || "U").toUpperCase()
+                        )}
                     </div>
                 </div>
             </div>
 
-            
             <div className="w-full px-4 sm:px-6 md:px-20 mt-20 md:mt-0">
-                <div className="flex flex-col md:flex-row items-start gap-6 w-full">                
+                <div className="flex flex-col md:flex-row items-start gap-6 w-full">
                     <div className="w-36 hidden md:block" />
 
                     <div className="flex-1 w-full">
@@ -67,11 +76,10 @@ const Profile = () => {
                                 className="btn btn-outline mt-2 md:mt-0 flex gap-2"
                                 onClick={() => setShowUpdateForm(!showUpdateForm)}
                             >
-                                <span ><MdModeEditOutline /></span> Edit Profile
+                                <span><MdModeEditOutline /></span> Edit Profile
                             </button>
                         </div>
 
-                     
                         {showUpdateForm && (
                             <form
                                 onSubmit={handleUpdate}

@@ -40,12 +40,18 @@ export const AuthProvider = ({ children }) => {
     const updateUserProfile = async (profile) => {
         if (auth.currentUser) {
             await updateProfile(auth.currentUser, profile);
-            setUser({
+            await auth.currentUser.reload();
+
+            
+            const updatedUser = {
                 ...auth.currentUser,
-                ...profile,
-            });
+                displayName: profile.displayName || auth.currentUser.displayName,
+                photoURL: profile.photoURL || auth.currentUser.photoURL,
+            };
+            setUser(updatedUser);
         }
     };
+
     const resetPassword = (email) => sendPasswordResetEmail(auth, email);
 
     const value = {
