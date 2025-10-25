@@ -1,14 +1,13 @@
-
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAZABA0H5npH8vgfbvpifI98bFfUIqVC4E",
-  authDomain: "skill-swap-store.firebaseapp.com",
-  projectId: "skill-swap-store",
-  storageBucket: "skill-swap-store.firebasestorage.app",
-  messagingSenderId: "859408025785",
-  appId: "1:859408025785:web:511eb227273ecc58bc3368"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 const app = initializeApp(firebaseConfig);
