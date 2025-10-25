@@ -86,7 +86,7 @@ const SignUp = () => {
                                 />
                                 <span
                                     onClick={() => setShow(!show)}
-                                    className='absolute right-3 top-2 cursor-pointer text-white text-xl'
+                                    className='absolute right-3 top-2 cursor-pointer text-white text-xl z-10'
                                 >
                                     {show ? <BiHide /> : <BiShow />}
                                 </span>

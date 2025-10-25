@@ -64,10 +64,14 @@ const Login = () => {
                                     className="input input-bordered w-full bg-transparent border-white/50 placeholder-white text-white focus:border-[#f56942] focus:ring focus:ring-[#f56942]/30"
                                     required
                                 />
-                                <span onClick={() => setShow(!show)} className='absolute right-3 top-2 cursor-pointer text-white text-xl'>
+                                <span
+                                    onClick={() => setShow(!show)}
+                                    className='absolute right-3 top-2 cursor-pointer text-white text-xl z-10'
+                                >
                                     {show ? <BiHide /> : <BiShow />}
                                 </span>
                             </div>
+
 
                             <button type="submit" className="btn btn-neutral mt-2 w-full">
                                 Login

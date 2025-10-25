@@ -193,7 +193,7 @@ return (
                             <img
                                 src={skill.image}
                                 alt={skill.skillName}
-                                className="w-full h-48 object-cover rounded-md"
+                                className="w-full h-48 object-cover rounded-t-lg"
                             />
                             {skill.discount && (
                                 <span className="absolute top-0 left-0  bg-[#f56942] text-white text-xs font-bold px-2 py-1 rounded">

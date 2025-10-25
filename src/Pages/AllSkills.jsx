@@ -57,7 +57,7 @@ const AllSkills = () => {
                             <img
                                 src={skill.image}
                                 alt={skill.skillName}
-                                className="w-full h-48 object-cover rounded-md mb-4"
+                                className="w-full h-48 object-cover rounded-t-lg mb-4"
                             />
                             <h3 className="text-xl font-semibold mb-2">{skill.skillName}</h3>
                             <p className="text-gray-600 mb-2">Price: ${skill.price}</p>
