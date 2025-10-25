@@ -47,7 +47,7 @@ const AllSkills = () => {
                             whileHover={{ scale: 1.05 }}
                             className="bg-white rounded-lg shadow-xl p-4 hover:shadow-lg transition-shadow duration-300 overflow-hidden relative"
                         >
-                            {/* 🔥 Discount badge (only if discount exists) */}
+                        
                             {skill.discount && (
                                 <span className="absolute top-4 left-4 bg-[#f56942] text-white text-md font-semibold px-3 py-1 rounded-md shadow">
                                     {skill.discount} OFF

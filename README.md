@@ -9,7 +9,7 @@
 - **demo.@gmail.com**
 
 ## Description
-*SkillSwap Store is your go-to platform to learn, share, and exchange local skills. Join a community of passionate learners and skilled instructors. Explore new skills, trade your talents, and unlock your full potential with SkillSwap Store.*
+*SkillSwap Store is your go-to platform to learn, share, and exchange local skills. Join a community of passionate learners and skilled instructors. Explore new skills,teach your talent, trade your talents, and unlock your full potential with SkillSwap Store.*
 
 
 ## Design

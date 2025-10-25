@@ -41,13 +41,13 @@ const HowItWorks = () => {
                             key={step.id}
                             className="relative flex flex-col md:flex-row items-start md:items-center bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300"
                         >
-                            {/* Left side */}
+                          
                             <div className="flex items-center flex-1 gap-4">
                                 {iconMap[step.icon]}
                                 <h3 className="text-lg md:text-xl font-semibold">{step.title}</h3>
                             </div>
 
-                            {/* Right side + / - icon */}
+                          
                             <div
                                 className="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer"
                                 onClick={() => toggleStep(step.id)}
@@ -59,7 +59,7 @@ const HowItWorks = () => {
                                 )}
                             </div>
 
-                            {/* Expanded content */}
+                           
                             <AnimatePresence>
                                 {activeStep === step.id && (
                                     <motion.div
